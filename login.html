@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="icon" href="styles/photos/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>ByteMetrics- Login</title>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="styles/photos/iconNoB.png" alt="ByteMetrics Logo" class="logo">
+    <h1 class="site-name">ByteMetrics</h1>
+  </div>
+
+  <div class="box">
+    <span class="border-line"></span>
+    <form id="login-form">
+      <h2>Sign in</h2>
+      <div class="inputbox">
+        <input type="text" id="username" name="username" required>
+        <span>Username or email:</span>
+        <i></i>
+      </div>
+      <div class="inputbox">
+        <input type="password" id="password" name="password" required>
+        <span>Password</span>
+        <i></i>
+      </div>
+      <div class="links">
+        <a href="https://learn.reboot01.com/">Forgot Password?</a>
+      </div>
+      <p id="error-message"></p>
+      <button id="submit" type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+  <script src="/styles/js/loginAnimation.js"></script>
+</body>
+</html>

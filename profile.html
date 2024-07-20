@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="icon" href="styles/photos/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/profile.css">
+  <script src="https://kit.fontawesome.com/4ff99e7c8c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="styles/photos/icon.png" alt="Logo">
+      <span>ByteMetrics</span>
+    </div>
+  </nav>
+  <div id="container">
+    <div id="main-content">
+      <div id="stats">
+        <div class="chart-container">
+          <div id="audit-chart-container">
+            <div class="audit-info">
+              <h3>Audits Stats</h3>
+              <p class="audit-number" id="audit-number">3</p>
+            </div>
+            <canvas id="myPieChart"></canvas>
+          </div>
+          <div id="technologies-chart-container">
+            <h3>Technologies</h3>
+            <canvas id="skillsRadarChart" class="ct-chart"></canvas>
+          </div>
+          <div id="technologies-chart-container">
+            <h3>Technical Skills</h3>
+            <canvas id="techskillsRadarChart" class="ct-chart"></canvas>
+          </div>
+        </div>
+        <div class="top-projects-container">
+        <div id="svg-chart-container">
+          <h3>Top Projects</h3>
+          <div id="svg-chart"></div>
+        </div>
+          <div id="total-xp-container">
+            <h3>Total XP</h3>
+            <p id="total-xp">Loading...</p>
+            <span id="total-xp-projects">Projects: Loading...</span>
+            <span id="total-xp-piscine">Piscine: Loading...</span>
+            <span id="total-xp-exercises">Exercises: Loading...</span>
+          </div>
+   
+            <div id="current-level-container">
+              <h3>Current Level</h3>
+              <div class="level-content">
+                <p class="rank-title"><span id="ranking">a</span> developer</p>
+                <p class="next-rank">Next rank in <span id="rank-left">17</span> levels</p>
+               
+                <div class="level-circle">
+                  <div class="level-number" id="level-number">25</div>
+                </div>
+                <p class="see-all-ranks"><a href="#" id="see-all-ranks">See all ranks</a></p>
+              </div>
+          </div>
+        </div>
+     
+        <div class="charts-container">
+          <div id="xp-line-chart-container">
+            <h3>XP Earned Over Time</h3>
+            <svg id="xp-line-chart" width="600" height="400"></svg>
+          </div>
+          <div id="audits-given-container">
+            <h3>Audits ratio</h3>
+            <div class="audit-values">
+        
+              <span>Done &uarr;</span>
+              <span>Received &darr;</span>
+             
+            </div>
+            <div class="audit-bars">
+              <div class="audit-bar-container">
+                <div class="audit-bar" id="audit-made-bar"></div>
+                <span id="audit-made-value-right">Loading...</span>
+              </div>
+              <div class="audit-bar-container">
+                <div class="audit-bar" id="audit-received-bar"></div>
+                <span id="audit-received-value-right">Loading...</span>
+              </div>
+            </div>
+            <div class="audit-ratio">
+              <h1 id="audit-ratio">Loading...</h1>
+              <p id="audit-message">Loading...</p>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+    </div>
+    <div id="sidebar">
+      <div id="profile-icon-container">
+        <i class="fas fa-user"></i>
+      </div>
+      <div id="profile-info">
+        <!-- Add more profile details here -->
+      </div>
+      <button id="logout-button">Logout</button>
+    </div>
+  </div>
+
+  <div id="ranks-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <h1>Ranks</h1>
+        <div class="ranks-chart">
+          <div class="rank-step">
+            <p class="level-number">0</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Aspiring developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">10</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Beginner developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">20</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Apprentice developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">30</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Assistant developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">40</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Basic developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">50</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Junior developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">55</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Confirmed developer</p>
+          </div>
+          <div class="rank-step">
+            <p class="level-number">60</p>
+            <div class="rank-timeline">
+              <div class="rank-dot"></div>
+            </div>
+            <p class="rank-title">Full-Stack developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="profile.js" type="module"></script>
+</body>
+</html>
