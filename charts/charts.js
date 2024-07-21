@@ -223,7 +223,7 @@ export function renderSkillsRadarChart(skills) {
       text.setAttribute("fill", "#ffffff");
       text.setAttribute("text-anchor", "end");
       text.setAttribute("font-size", "12px");
-      text.textContent = (i / 1000).toFixed(2) + ' KB';
+      text.textContent = (i / 1000).toFixed(0) + ' KB';
       svg.appendChild(text);
   
       const line = document.createElementNS(svgNamespace, "line");
