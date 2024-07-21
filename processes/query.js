@@ -83,7 +83,11 @@ export const techSkill = `{
 ;
 
 export const getLevel = ` {
-  transaction(order_by : {amount:desc},limit : 1 , where : {type : {_eq : "level"}}){
-    amount
+  transaction(
+      order_by: {amount:desc}
+      limit: 1
+      where: { type: { _eq: "level" }, path: { _like: "/bahrain/bh-module%" } }
+  ) {
+      amount
   }
 }`;
